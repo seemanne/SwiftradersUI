@@ -14,6 +14,14 @@
 		FD7BD7332A4D7F8100249122 /* SwiftradersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD7322A4D7F8100249122 /* SwiftradersUITests.swift */; };
 		FD7BD73D2A4D7F8100249122 /* SwiftradersUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD73C2A4D7F8100249122 /* SwiftradersUIUITests.swift */; };
 		FD7BD73F2A4D7F8100249122 /* SwiftradersUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD73E2A4D7F8100249122 /* SwiftradersUIUITestsLaunchTests.swift */; };
+		FD7BD74D2A4D808A00249122 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD74C2A4D808A00249122 /* Agent.swift */; };
+		FD7BD74F2A4D819900249122 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD74E2A4D819900249122 /* Network.swift */; };
+		FD7BD7512A4D854B00249122 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD7502A4D854B00249122 /* Chart.swift */; };
+		FD7BD7532A4D8CFF00249122 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD7522A4D8CFF00249122 /* Contract.swift */; };
+		FD7BD7562A4DA52300249122 /* ContractViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD7552A4DA52300249122 /* ContractViews.swift */; };
+		FD7BD7582A4DCF9900249122 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD7572A4DCF9900249122 /* BlankView.swift */; };
+		FD7BD75B2A4DD30C00249122 /* TextSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BD75A2A4DD30C00249122 /* TextSplit.swift */; };
+		FD9CE3CD2A50327700542726 /* AgentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CE3CC2A50327700542726 /* AgentViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		FD7BD7382A4D7F8100249122 /* SwiftradersUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftradersUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BD73C2A4D7F8100249122 /* SwiftradersUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftradersUIUITests.swift; sourceTree = "<group>"; };
 		FD7BD73E2A4D7F8100249122 /* SwiftradersUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftradersUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD7BD74C2A4D808A00249122 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		FD7BD74E2A4D819900249122 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FD7BD7502A4D854B00249122 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		FD7BD7522A4D8CFF00249122 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		FD7BD7552A4DA52300249122 /* ContractViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractViews.swift; sourceTree = "<group>"; };
+		FD7BD7572A4DCF9900249122 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		FD7BD75A2A4DD30C00249122 /* TextSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSplit.swift; sourceTree = "<group>"; };
+		FD9CE3CC2A50327700542726 /* AgentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +111,16 @@
 		FD7BD71F2A4D7F7F00249122 /* SwiftradersUI */ = {
 			isa = PBXGroup;
 			children = (
+				FD7BD7592A4DD2F700249122 /* ViewUtils */,
+				FD7BD7542A4DA4F900249122 /* DetailViews */,
+				FD7BD74B2A4D806700249122 /* Models */,
 				FD7BD7202A4D7F7F00249122 /* SwiftradersUIApp.swift */,
 				FD7BD7222A4D7F7F00249122 /* ContentView.swift */,
 				FD7BD7242A4D7F8100249122 /* Assets.xcassets */,
 				FD7BD7262A4D7F8100249122 /* SwiftradersUI.entitlements */,
 				FD7BD7272A4D7F8100249122 /* Preview Content */,
+				FD7BD74E2A4D819900249122 /* Network.swift */,
+				FD7BD7572A4DCF9900249122 /* BlankView.swift */,
 			);
 			path = SwiftradersUI;
 			sourceTree = "<group>";
@@ -127,6 +148,33 @@
 				FD7BD73E2A4D7F8100249122 /* SwiftradersUIUITestsLaunchTests.swift */,
 			);
 			path = SwiftradersUIUITests;
+			sourceTree = "<group>";
+		};
+		FD7BD74B2A4D806700249122 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD7BD74C2A4D808A00249122 /* Agent.swift */,
+				FD7BD7502A4D854B00249122 /* Chart.swift */,
+				FD7BD7522A4D8CFF00249122 /* Contract.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD7BD7542A4DA4F900249122 /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD7BD7552A4DA52300249122 /* ContractViews.swift */,
+				FD9CE3CC2A50327700542726 /* AgentViews.swift */,
+			);
+			path = DetailViews;
+			sourceTree = "<group>";
+		};
+		FD7BD7592A4DD2F700249122 /* ViewUtils */ = {
+			isa = PBXGroup;
+			children = (
+				FD7BD75A2A4DD30C00249122 /* TextSplit.swift */,
+			);
+			path = ViewUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9CE3CD2A50327700542726 /* AgentViews.swift in Sources */,
+				FD7BD7512A4D854B00249122 /* Chart.swift in Sources */,
+				FD7BD74D2A4D808A00249122 /* Agent.swift in Sources */,
+				FD7BD7562A4DA52300249122 /* ContractViews.swift in Sources */,
 				FD7BD7232A4D7F7F00249122 /* ContentView.swift in Sources */,
+				FD7BD7532A4D8CFF00249122 /* Contract.swift in Sources */,
+				FD7BD7582A4DCF9900249122 /* BlankView.swift in Sources */,
+				FD7BD74F2A4D819900249122 /* Network.swift in Sources */,
+				FD7BD75B2A4DD30C00249122 /* TextSplit.swift in Sources */,
 				FD7BD7212A4D7F7F00249122 /* SwiftradersUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SwiftradersUI/SwiftradersUI.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftradersUI/Preview Content\"";
@@ -448,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SwiftradersUI/SwiftradersUI.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftradersUI/Preview Content\"";
