@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftradersUIApp: App {
+    
+    var network = Network()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(network)
         }
     }
 }

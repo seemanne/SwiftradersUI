@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct BlankView:View {
+    var body: some View {
+            Text("this is blank")
+            .padding().toolbar {
+                ToolbarItem {
+                    NavigationLink("Delete Creature"){
+                        ContentView().navigationTitle("Creature Editor")
+                    }
+                }
+            }        }
+}

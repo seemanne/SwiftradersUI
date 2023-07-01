@@ -7,14 +7,45 @@
 
 import SwiftUI
 
-struct AgentViews: View {
+struct AgentFullView: View {
+    var agent : Agent
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment:.top) {
+            Text("\(agent.accountId)")
+            
+            VStack(alignment: .leading) {
+                Text(agent.symbol)
+                    .bold()
+                Text(agent.headquarters.lowercased())
+                
+            }
+        }
+    }
+}
+
+struct AgentMiniView: View {
+    var agent : Agent
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(agent.symbol).font(.title).fontWeight(.bold)
+                Spacer()
+            }
+
+            HStack {
+                Text(agent.headquarters)
+                Text(String(agent.credits)).fontWeight(.semibold)
+                Spacer()
+            }
+        }
     }
 }
 
 struct AgentViews_Previews: PreviewProvider {
     static var previews: some View {
-        AgentViews()
+        AgentFullView(agent:Agent())
+        AgentMiniView(agent:Agent())
     }
 }

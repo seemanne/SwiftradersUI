@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var network : Network
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Section("Agents") {
+                AgentMiniView(agent: network.agent)
+            }.onAppear {
+                network.getAgents()
+            }.padding()
+            Section("Contracts") {
+                ForEach(network.contractList.data, id: \.self) {contract in
+                    VStack {
+                        NavigationStack {
+                            ContractDetail(contract: contract).navigationTitle(contract.id)
+                        }
+                    }
+                }
+            }.onAppear() {
+                network.listContracts()
+            }.padding()
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static var network = Network()
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(network)
     }
 }
