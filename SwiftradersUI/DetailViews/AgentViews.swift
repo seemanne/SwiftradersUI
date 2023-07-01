@@ -28,16 +28,11 @@ struct AgentMiniView: View {
     var agent : Agent
     
     var body: some View {
-        VStack {
-            HStack {
+        VStack(alignment: .leading) {
                 Text(agent.symbol).font(.title).fontWeight(.bold)
-                Spacer()
-            }
-
             HStack {
-                Text(agent.headquarters)
+                Text(agent.headquarters).foregroundColor(.gray)
                 Text(String(agent.credits)).fontWeight(.semibold)
-                Spacer()
             }
         }
     }

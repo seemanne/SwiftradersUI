@@ -27,11 +27,11 @@ struct Agent: Hashable, Decodable {
     var startingFaction : String
     
     init() {
-        accountId = "None"
-        symbol = "None"
-        headquarters = "None"
+        accountId = "accountId"
+        symbol = "agentSymbol"
+        headquarters = "agentHeadquarters"
         credits = 0
-        startingFaction = "None"
+        startingFaction = "startingFaction"
     }
     
     init(from decoder: Decoder) throws {
