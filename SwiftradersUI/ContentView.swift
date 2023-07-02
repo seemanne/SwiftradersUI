@@ -27,6 +27,17 @@ struct ContentView: View {
             }.onAppear() {
                 network.listContracts()
             }.padding()
+            Section("Ships") {
+                ForEach(network.shipList.data, id: \.self) {ship in
+                    VStack {
+                        NavigationStack {
+                            FullShipView(ship: ship)
+                        }
+                    }
+                }
+            }.onAppear() {
+                network.listShips()
+            }
         }
     }
 }
