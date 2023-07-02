@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Meta: Decodable {
+    var total : Int = 0
+    var page : Int = 0
+    var limit : Int = 0
+}

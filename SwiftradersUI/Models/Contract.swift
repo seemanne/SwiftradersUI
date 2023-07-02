@@ -39,10 +39,5 @@ struct Contract:Decodable, Identifiable, Hashable{
 struct ContractList:Decodable{
     
     var data : [Contract] = [Contract()]
-    
-    struct Meta: Decodable {
-        var total : Int = 0
-        var page : Int = 0
-        var limit : Int = 0
-    }
+    var meta : Meta = Meta()
 }
